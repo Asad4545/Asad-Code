@@ -1,0 +1,242 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace Calculator
+{
+    public class CalculatorClass
+    {
+        public void Addition()
+        {
+            
+            
+                try
+                {
+                    Console.Write("Enter value for Addition: ");
+                    double x = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("Enter another value for Addition: ");
+                    double y = Convert.ToDouble(Console.ReadLine());
+
+                    double Sum = x + y;
+                    Console.WriteLine("");
+                    Console.Write("Addition of these two numbers: " + Sum);
+
+                }
+                catch
+                {
+                    Console.Write("You Enter the invalid value. TRY AGAIN: ");
+                }
+            
+            
+
+            
+        }
+        public void subtraction()
+        {
+            try
+            {
+                Console.Write("Enter value for Subtraction: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter another value for Subtraction: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+
+                double Sub = a - b;
+
+                Console.WriteLine("");
+                Console.Write("Subtration of these two numbers: " + Sub);
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+        public void Multiplication()
+        {
+            try
+            {
+                Console.Write("Enter value for Multiplication: ");
+                double c = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter another value for Multiplication: ");
+                double d = Convert.ToDouble(Console.ReadLine());
+
+                double Mul = c * d;
+
+                Console.WriteLine("");
+                Console.Write("Multiplication of these two numbers: " + Mul);
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+        public void Modulus()
+        {
+            try
+            {
+                Console.Write("Enter Dividend: ");
+                double e = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter divisor: ");
+                double f = Convert.ToDouble(Console.ReadLine());
+
+                double Mod = e % f;
+
+                Console.WriteLine("");
+                Console.Write("Modulus of these two numbers: " + Mod);
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+        public void SquareRoot()
+        {
+            try
+            {
+                double q;
+                Console.Write("Enter value for Squre Root: ");
+                q = Convert.ToDouble(Console.ReadLine());
+                Console.Write($"Square root of {q} is " + Math.Sqrt(q));
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+        public void SquareMeth()
+        {
+            try
+            {
+                double s;
+                Console.Write("Enter value for Square: ");
+                s = Convert.ToDouble(Console.ReadLine());
+                Double square = s * s;
+
+                Console.Write($"Square root of {s} is " + square);
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+        public void pow()
+        {
+            try
+            {
+                double o, p;
+                Console.Write("Enter the value: ");
+                o = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter the power: ");
+                p = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Power of given value is " + Math.Pow(o, p));
+            }
+            catch
+            {
+                Console.Write("You Enter the invalid value. TRY AGAIN: ");
+            }
+        }
+
+    }
+}
+
+
+//MAIN CLASS
+
+using System;
+
+namespace Calculator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            CalculatorClass obj = new CalculatorClass();
+
+            Console.WriteLine("Which Operation you want to perform? ");
+            Console.WriteLine("1: Addition ");
+            Console.WriteLine("2: Subtraction ");
+            Console.WriteLine("3: Multiplication ");
+            Console.WriteLine("4: Modlus ");
+            Console.WriteLine("5: Square Root ");
+            Console.WriteLine("6: Square ");
+            Console.WriteLine("7: Power ");
+
+            
+                try
+                {
+                    Console.Write("Enter your Choice: ");
+                    int Choice = int.Parse(Console.ReadLine()); ;
+
+                    switch (Choice)
+                    {
+                        case 0:
+                            Console.WriteLine("");
+                            Console.WriteLine("You enter the wrong value: ");
+                            break;
+
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Addition Opertaion ");
+
+                            Console.WriteLine("");
+                            obj.Addition();
+                            break;
+
+                        case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Subtraction Opertaion ");
+                            Console.WriteLine("");
+                            obj.subtraction();
+                            break;
+
+                        case 3:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Multiplication Opertaion ");
+                            Console.WriteLine("");
+                            obj.Multiplication();
+                            break;
+
+                        case 4:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Modulus Opertaion ");
+                            Console.WriteLine("");
+                            obj.Modulus();
+                            break;
+
+                        case 5:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Square Root Opertaion ");
+                            Console.WriteLine("");
+                            obj.SquareRoot();
+                            break;
+
+                        case 6:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the Square Opertaion ");
+                            Console.WriteLine("");
+                            obj.SquareMeth();
+                            break;
+
+                        case 7:
+                            Console.WriteLine("");
+                            Console.WriteLine("You Enter the power Opertaion ");
+                            Console.WriteLine("");
+                            obj.pow();
+                            break;
+                    }
+                }
+                catch
+                {
+                    Console.Write("You Enter the invalid value. TRY AGAIN: ");
+                }
+
+            
+        }
+    }
+}
